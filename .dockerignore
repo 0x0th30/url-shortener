@@ -1,0 +1,7 @@
+*
+
+!src/
+!babel.config.js
+!tsconfig.json
+!package.json
+!dist/
