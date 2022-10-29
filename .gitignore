@@ -1,3 +1,7 @@
+volumes/*
+.env
+postgres.env
+
 # Logs
 logs
 *.log
