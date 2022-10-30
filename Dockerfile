@@ -8,4 +8,4 @@ EXPOSE 3000
 
 RUN yarn install --production=true
 
-CMD [ "yarn start:prod" ]
+CMD [ "yarn", "start:prod" ]
