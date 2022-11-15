@@ -13,6 +13,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "jest": "^29.2.0",
     "prisma": "^4.5.0",
+    "ts-jest": "^29.0.3",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.1.0",
     "typescript": "*"
@@ -23,7 +24,8 @@
     "md5": "^2.3.0"
   },
   "scripts": {
-    "lint": "eslint --fix .",
+    "sca": "yarn audit",
+    "lint": "eslint --fix src tests",
     "start:dev": "ts-node-dev -r tsconfig-paths/register src/app.ts",
     "start:prod": "node dist/app.js",
     "test": "jest"

@@ -5,4 +5,4 @@ describe('testing test environment', () => {
 
     expect(x).toEqual(y);
   });
-})
+});

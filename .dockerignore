@@ -1,7 +1,7 @@
 *
 
 !src/
-!babel.config.js
+!prisma/
 !tsconfig.json
-!package.json
 !dist/
+!package.json

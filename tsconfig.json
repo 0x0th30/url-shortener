@@ -1,21 +1,56 @@
 {
   "compilerOptions": {
-    "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-    "module": "commonjs",                                /* Specify what module code is generated. */
-    "baseUrl": ".",                                      /* Specify the base directory to resolve non-relative module names. */
-    "paths": {                                           /* Specify a set of entries that re-map imports to additional lookup locations. */
-      "@tests/*": [ "tests/*" ],
-      "@mocks/*": [ "tests/mocks/*" ],
-      "@middlewares/*": [ "src/api/middlewares/*" ],
-      "@routes/*": [ "src/api/routes/*" ],
-      "@data-access/*": [ "src/data-access/*" ],
-      "@loaders/*": [ "src/loaders/*" ],
-      "@services/*": [ "src/services/*" ]
-    },
-    "outDir": "dist",                                    /* Specify an output folder for all emitted files. */
-    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
-    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
-    "strict": true,                                      /* Enable all strict type-checking options. */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  }
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
+    ],
+    "rootDirs": [
+      "./src",
+      "./tests"
+    ],
+    "outDir": "./dist",
+    "removeComments": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@api/*": ["src/api/*"],
+      "@middlewares/*": ["src/api/middlewares/*"],
+      "@routes/*": ["src/api/routes/*"],
+      "@config/*": ["src/config/*"],
+      "@loaders/*": ["src/loaders/*"],
+      "@models/*": ["src/models/*"],
+      "@services/*": ["src/services/*"],
+      "@repositories/*": ["src/repositories/*"],
+      "@contracts/*": ["src/contracts/*"],
+      "@entities/*": ["src/entities/*"],
+      "@errors/*": ["src/errors/*"],
+      "@types/*": ["src/types/*"],
+      "@mocks/*": ["tests/mocks/*"],
+      "@utils/*": ["src/utils/*"]
+    }
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./tests/**/*.ts",
+    "./tests/**/*.tsx"
+  ]
 }

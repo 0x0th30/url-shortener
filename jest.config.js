@@ -1,23 +1,33 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { pathsToModuleNameMapper } = require('ts-jest');
+const { compilerOptions } = require('./tsconfig.json');
+
 module.exports = {
   automock: false,
-
-  collectCoverage: true,
+  forceExit: true,
+  cacheDirectory: '/tmp/jest_rs',
+  clearMocks: true,
+  preset: 'ts-jest',
+  moduleNameMapper: pathsToModuleNameMapper(
+    compilerOptions.paths,
+    { prefix: '<rootDir>' },
+  ),
   coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: [
     '/node_modules/',
   ],
   coverageProvider: 'babel',
-  coverageReporters: ['json'],
-
-  maxWorkers: '1',
-
-  modulePathIgnorePatterns: [
-    'src/',
-    'prisma/',
-    'coverage/',
-    'volumes/',
-    'node_modules/',
+  coverageReporters: [
+    'json', 'html',
   ],
-
-  moduleNameMapper: {},
+  maxWorkers: 1,
+  testMatch: [
+    '**/tests/**/*.[jt]s?(x)',
+    '**/?(*.)+(spec|test).[tj]s?(x)',
+  ],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/tests/mocks/',
+    '/src/',
+  ],
 };
