@@ -11,5 +11,13 @@ module.exports = {
 
   maxWorkers: '1',
 
+  modulePathIgnorePatterns: [
+    'src/',
+    'prisma/',
+    'coverage/',
+    'volumes/',
+    'node_modules/',
+  ],
+
   moduleNameMapper: {},
 };
