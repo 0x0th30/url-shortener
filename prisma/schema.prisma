@@ -13,5 +13,4 @@ datasource db {
 model Url {
   id             String @id @unique
   url            String
-  owner_key_hash String
 }
