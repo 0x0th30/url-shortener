@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { test } from '@middlewares/test';
 import { createUrl } from '@middlewares/create-url';
+import { retrieveUrl } from '@middlewares/retrieve-url';
 
 const router = Router();
-router.get('/', test);
+router.get('/:id', retrieveUrl);
 router.post('/create', createUrl);
 
 export { router };

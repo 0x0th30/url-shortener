@@ -27,7 +27,7 @@ export class Url {
       throw error;
     }
 
-    logger.info('The specified url id does not exists.');
+    logger.error('The specified url id does not exists.');
     return undefined;
   }
 
