@@ -1,19 +1,18 @@
 import md5 from 'md5';
 import { Url } from '@entities/url';
-import { prisma } from '@loaders/prisma-client';
 import { logger } from '@loaders/logger';
 
-interface CreateUrlRequest {
+export interface CreateUrlRequest {
   url: string,
 }
 
-interface CreateUrlResponse {
+export interface CreateUrlResponse {
   success: boolean,
   shortenedLink?: string,
   message?: string,
 }
 
-class CreateUrlService {
+export class CreateUrlService {
   private url: Url;
 
   constructor(url: Url) {
@@ -68,15 +67,3 @@ class CreateUrlService {
     return urlId;
   }
 }
-
-(async () => {
-  const x = new Url(prisma);
-  const a = new CreateUrlService(x);
-  const request: CreateUrlRequest = {
-    url: 'https://www.prisma.io/docs/getting-started/aab',
-  };
-  const b = await a.execute(request);
-  console.log(b);
-})();
-
-export { CreateUrlService, CreateUrlRequest };

@@ -1,5 +1,4 @@
 import { PrismaClient } from '@prisma/client';
-// import { NotFoundUrl } from '@errors/application-errors';
 import { logger } from '@loaders/logger';
 
 export interface IUrl {
