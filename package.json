@@ -28,8 +28,8 @@
   "scripts": {
     "sca": "yarn audit",
     "lint": "eslint --fix src tests",
-    "start:dev": "ts-node-dev -r tsconfig-paths/register src/app.ts",
-    "start:prod": "node dist/app.js",
+    "start:dev": "prisma generate && prisma migrate deploy && ts-node-dev -r tsconfig-paths/register src/app.ts",
+    "start:prod": "prisma generate && prisma migrate deploy && node dist/app.js",
     "test": "jest"
   }
 }
