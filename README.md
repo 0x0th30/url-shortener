@@ -1,11 +1,13 @@
 <h1 align = "center"> URL Shortener </h1>
 
+<hr>
+
 <h3 align = "center"> 💁 About </h3>
 <p>
   Simple project to show my last 6 months developed/improved skills, like OOP concepts, clean code, unit tests, linting, CI and more. The URL Shortener helps you with big links that could be smaller.
  </p>
 
-<br>
+<hr>
  
 <h3 align = "center"> ⭐ Features </h3>
 <ul>
@@ -13,7 +15,7 @@
   <li> Use the created links to perform speed redirects. </li>
  </ul>
 
-<br>
+<hr>
 
 <h3 align = "center"> 🎯 Endpoints </h3>
 <ul>
@@ -21,7 +23,7 @@
   <li> (GET) /{ìd}: specify the link <strong>id</strong> to perform the redirect. </li>
 </ul>
 
-<br>
+<hr>
 
 <h3 align = "center"> ⚙️ Build </h3>
 <p>
