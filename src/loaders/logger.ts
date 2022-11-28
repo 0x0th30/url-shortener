@@ -17,5 +17,9 @@ export const logger = createLogger({
     format.colorize(),
     logTemplate,
   ),
-  transports: [new transports.Console()],
+  transports: [
+    new transports.Console({
+      silent: process.argv.indexOf('--silent') >= 0,
+    }),
+  ],
 });
