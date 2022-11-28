@@ -36,16 +36,11 @@ export class Url {
 
     try {
       const url = await this.prisma.url.create({ data });
-      if (url) {
-        logger.info('The url was successfully created.');
-        return url;
-      }
+      logger.info('The url was successfully created.');
+      return url;
     } catch (error: any) {
       logger.error(`Creation was failed by ${error.name}!`);
       throw error;
     }
-
-    logger.error('The url cannot be created.');
-    return undefined;
   }
 }
