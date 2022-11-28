@@ -1,8 +1,8 @@
 services:
   api:
     build:
-      # context: .
-      dockerfile: Dockerfile-dev
+      context: .
+      # dockerfile: Dockerfile-dev
     ports:
       - 3000:3000
     links:

@@ -3,5 +3,5 @@
 !src/
 !prisma/
 !tsconfig.json
-!dist/
 !package.json
+!babel.config.js
