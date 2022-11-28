@@ -36,9 +36,9 @@
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
     "sca": "yarn audit",
     "lint": "eslint --fix src tests",
+    "test": "jest --silent --verbose",
     "migrate": "prisma generate && prisma migrate deploy",
     "start:dev": "yarn migrate && ts-node-dev -r tsconfig-paths/register src/app.ts",
-    "start:prod": "ls && yarn migrate && node dist/app.js",
-    "test": "jest"
+    "start:prod": "ls && yarn migrate && node dist/app.js"
   }
 }
