@@ -4,7 +4,7 @@
 
 <h3 align = "center"> 💁 About </h3>
 <p>
-  Simple project to show my last 6 months developed/improved skills, like OOP concepts, clean code, unit tests, linting, CI and more. The URL Shortener helps you with big links that could be smaller.
+  Simple project to show my last 12 months developed/improved skills, like OOP concepts, clean code, unit tests, linting, CI and more. The URL Shortener helps you with big links that could be smaller.
  </p>
 
 <hr>
