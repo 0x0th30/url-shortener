@@ -21,10 +21,10 @@ export class RetrieveUrlService {
   public async execute(request: RetrieveUrlRequest): Promise<RetrieveUrlResponse> {
     logger.info('Initializing retrieve-url-service...');
 
+    const { id } = request;
     const response: RetrieveUrlResponse = { success: false };
 
     logger.info('Starting to search by the specified id...');
-    const { id } = request;
     const urlExists = await this.url.searchById(id);
     if (urlExists) {
       response.success = true;
