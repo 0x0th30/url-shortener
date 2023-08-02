@@ -40,5 +40,9 @@
     "migrate": "prisma generate && prisma migrate deploy",
     "start:dev": "yarn migrate && ts-node-dev -r tsconfig-paths/register src/app.ts",
     "start:prod": "ls && yarn migrate && node dist/app.js"
+  },
+  "resolutions": {
+    "semver": "^7.5.2",
+    "json5": "^1.0.2"
   }
 }
